@@ -1,0 +1,14 @@
+Given a number N followed by an array of N numbers. Another number D is given. Rotate the array D times and print the array.
+
+
+Sample
+INPUT
+4 1
+3 2 4 1
+OUTPUT
+2 4 1 3
+n, d = map(int, input().split())
+l = [int(x) for x in input().split()]
+for i in range(d):
+    l.append(l.pop(0))
+print(*l)
